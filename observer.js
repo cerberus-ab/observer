@@ -82,7 +82,7 @@
             var topic = this._topics[event];
             if (typeof topic != 'undefined') {
                 // off event for topic
-                if (typeof callback != 'function') {
+                if (arguments.length === 1 || typeof callback != 'function') {
                     topic.queue.length = 0;
                 }
                 // off callback for topic event
